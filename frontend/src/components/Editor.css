@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(202, 233, 233);
+}
+
+/* .remote-cursor { */
+    /* border-left: 2px solid transparent; base fallback */
+    /* margin-left: -1px;
+    height: 100%;
+    pointer-events: none;
+} */
+ 
+.remote-cursor {
+    border-left: 2px solid red !important;
+    height: 100%;
+    position: absolute;
+  }
+  
+.remote-user-label::after {
+    /* base label, overridden dynamically */
+    content: 'user';
+    position: absolute;
+    pointer-events: none;
+}
+  
+
