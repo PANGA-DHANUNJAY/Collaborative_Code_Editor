@@ -67,14 +67,46 @@ npm run dev
 ### 📝 Register Page
 ![Register](frontend/screenshots/Register.png)
 
-### 💬 Chat Window
-![Chat Window](frontend/screenshots/Chat_Window.png)
-
-### 🧑‍💻 Code Editor Interface
-![Code Editor](frontend/screenshots/Code_Editor_Interface.png)
+### 📊 Session Dashboard
+![Session Dashboard](frontend/screenshots/Session_Dashboard.png)
 
 ### 🚪 Join Notification
 ![Join Notification](frontend/screenshots/Join_Notification.png)
 
-### 📊 Session Dashboard
-![Session Dashboard](frontend/screenshots/Session_Dashboard.png)
+### 🧑‍💻 Code Editor Interface
+![Code Editor](frontend/screenshots/Code_Editor_Interface.png)
+
+### 💬 Chat Window
+![Chat Window](frontend/screenshots/Chat_Window.png)
+
+---
+
+## 🔒 Security Highlights
+
+- 🔑 Passwords are hashed using **bcrypt**
+- 🛡️ JWT-based session authentication
+- 🔐 WebSocket authorization and room validation
+- 🧼 Input validation and HTTPS communication enforcement
+
+---
+
+## 📈 Future Enhancements
+
+- 📱 Mobile App Support  
+- 🧠 AI-Based Code Suggestions  
+- 🗂️ Git Integration & Version Control  
+- 📆 Calendar & Task Integration  
+- 📊 Usage Analytics & Feedback System  
+- 🧩 Plugin System for Extensibility  
+- 🔁 Undo/Redo and Change History  
+- 📹 Video/Audio Collaboration Support  
+
+---
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+
+
+
+
