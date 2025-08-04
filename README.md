@@ -101,10 +101,7 @@ npm run dev
 - 🔁 Undo/Redo and Change History  
 - 📹 Video/Audio Collaboration Support  
 
----
-## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
 
 
 
