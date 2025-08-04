@@ -8,7 +8,7 @@
 
 //   const handleSubmit = async (e) => {
 //     e.preventDefault();
-//     await axios.post("http://192.168.181.235:5000/register", formData);
+//     await axios.post("http://localhost:5000/register", formData);
 //     alert("Registration Successful");
 //   };
 

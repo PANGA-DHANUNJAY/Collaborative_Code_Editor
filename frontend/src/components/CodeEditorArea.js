@@ -19,7 +19,7 @@ import ChatIcon from '@mui/icons-material/Chat';
 
 
 
-// const socket = io("http://192.168.181.235:5000", {
+// const socket = io("http://localhost:5000", {
 //     transports: ["websocket", "polling"], // optional but good to include both
 // });
 
@@ -139,7 +139,7 @@ export default function CodeEditorArea({ socket, roomId, user }) {
     useEffect(() => {
         // socket.emit("join-room", { roomId });
 
-        fetch(`http://192.168.181.235:5000/api/files/${roomId}`)
+        fetch(`http://localhost:5000/api/files/${roomId}`)
             .then(res => res.json())
             .then(data => {
                 console.log("Fetched data:", data);
@@ -212,7 +212,7 @@ export default function CodeEditorArea({ socket, roomId, user }) {
                 code: newCode
             });
 
-            fetch(`http://192.168.181.235:5000/api/files/${selectedFileRef.current._id}`, {
+            fetch(`http://localhost:5000/api/files/${selectedFileRef.current._id}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ content: newCode })
@@ -260,7 +260,7 @@ export default function CodeEditorArea({ socket, roomId, user }) {
         }
         else {
             try {
-                const res = await fetch("http://192.168.181.235:5000/api/run", {
+                const res = await fetch("http://localhost:5000/api/run", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
@@ -317,7 +317,7 @@ export default function CodeEditorArea({ socket, roomId, user }) {
     const handleCreateFile = async () => {
         if (!newFileName.trim()) return;
         const ext = getLanguageFromExtension(newFileName);
-        const res = await fetch("http://192.168.181.235:5000/api/files/create", {
+        const res = await fetch("http://localhost:5000/api/files/create", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -352,7 +352,7 @@ export default function CodeEditorArea({ socket, roomId, user }) {
 
         if (window.confirm("Are you sure you want to delete this file?")) {
             try {
-                const response = await fetch(`http://192.168.181.235:5000/api/files/${file._id}`, {
+                const response = await fetch(`http://localhost:5000/api/files/${file._id}`, {
                     method: 'DELETE',
                 });
 
@@ -385,7 +385,7 @@ export default function CodeEditorArea({ socket, roomId, user }) {
         const language = getLanguageFromExtension(newName);
 
         try {
-            const res = await fetch(`http://192.168.181.235:5000/api/files/rename/${file._id}`, {
+            const res = await fetch(`http://localhost:5000/api/files/rename/${file._id}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ name: newName, language: language }),

@@ -2,7 +2,7 @@
 // import { useEffect, useState, useRef } from "react";
 // import { useParams } from "react-router-dom";
 // import { io } from "socket.io-client";
-// const socket = io("http://192.168.181.235:5000", {
+// const socket = io("http://localhost:5000", {
 //     transports: ["websocket", "polling"], // optional but good to include both
 // });
 
@@ -20,7 +20,7 @@
 //         console.log("editoer.js usereffect");
 //         // if (socket.current) return;
 
-//         // socket.current = io("http://192.168.181.235:5000");
+//         // socket.current = io("http://localhost:5000");
 
 //         socket.on("connect", () => {
 //             console.log("✅ Connected to socket server!");
@@ -63,7 +63,7 @@ import { useParams } from "react-router-dom";
 import { io } from "socket.io-client";
 import TopBar from "./TopBar";
 
-const socket = io("http://192.168.181.235:5000", {
+const socket = io("http://localhost:5000", {
     transports: ["websocket", "polling"],
 });
 

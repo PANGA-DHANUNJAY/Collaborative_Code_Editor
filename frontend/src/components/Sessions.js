@@ -12,7 +12,7 @@
 //     const fetchSessions = async () => {
 //         try {
 //             const token = localStorage.getItem("token");
-//             const res = await axios.get("http://192.168.181.235:5000/api/sessions/my-sessions", {
+//             const res = await axios.get("http://localhost:5000/api/sessions/my-sessions", {
 //                 headers: { Authorization: `Bearer ${token}` }
 //             });
 //             setSessions(res.data.sessions);
@@ -25,7 +25,7 @@
 //         if (!roomId) return alert("Enter a Room ID!");
 //         try {
 //             const token = localStorage.getItem("token");
-//             await axios.post("http://192.168.181.235:5000/api/sessions/join", { roomId }, {
+//             await axios.post("http://localhost:5000/api/sessions/join", { roomId }, {
 //                 headers: { Authorization: `Bearer ${token}` }
 //             });
 //             alert("Joined session successfully!");
@@ -100,7 +100,7 @@ const Sessions = () => {
         if (!token) return; // Ensure token is available before making the request
 
         axios
-            .get(`http://192.168.181.235:5000/api/session/user-sessions`, {
+            .get(`http://localhost:5000/api/session/user-sessions`, {
                 headers: {
                     Authorization: `Bearer ${token}` // Attach token in the Authorization header
                 }
@@ -120,7 +120,7 @@ const Sessions = () => {
         console.log("🚀 Sending join request with Room ID:", roomId);
 
         try {
-            const res = await axios.post("http://192.168.181.235:5000/api/session/join",
+            const res = await axios.post("http://localhost:5000/api/session/join",
                 { roomId: roomId },
                 {
                     headers: {
@@ -160,7 +160,7 @@ const Sessions = () => {
         console.log("🚀 Sending request with:", JSON.stringify({ roomId: newRoomId }));
 
         try {
-            const res = await axios.post("http://192.168.181.235:5000/api/session/create-session",
+            const res = await axios.post("http://localhost:5000/api/session/create-session",
                 { roomId: newRoomId },
                 {
                     headers: {

@@ -9,7 +9,7 @@
 //   const handleSubmit = async (e) => {
 //     e.preventDefault();
 //         try {
-//             const response = await axios.post("http://192.168.181.235:5000/login", formData);
+//             const response = await axios.post("http://localhost:5000/login", formData);
 //             localStorage.setItem("token", response.data.token); // Store JWT in localStorage
 //             alert("Login successful!");
 //         } catch (error) {
@@ -43,6 +43,7 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log("submitting the form");
         try {
             await login(email, password);
             navigate("/sessions");
@@ -53,17 +54,17 @@ const Login = () => {
 
     return (
         <Box
-                    sx={{
-                        minHeight: '100vh',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        background: `url(${bgImage}) center/cover no-repeat`,
-                        backdropFilter: 'blur(6px)',
-                        backgroundAttachment: 'fixed',
-                        px: 2,
-                    }}
-                >
+            sx={{
+                minHeight: '100vh',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                background: `url(${bgImage}) center/cover no-repeat`,
+                backdropFilter: 'blur(6px)',
+                backgroundAttachment: 'fixed',
+                px: 2,
+            }}
+        >
             <Paper
                 elevation={6}
                 sx={{
